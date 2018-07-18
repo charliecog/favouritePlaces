@@ -1,0 +1,19 @@
+.placeCards {
+    width: 80%;
+    height: 500px;
+    margin-top: 20px;
+    background-color: darkblue;
+    overflow: auto;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*align-items: center;*/
+    /*overflow-y: scroll;*/
+}
+
+.placeCardDetails {
+    width: 80%;
+    height: 150px;
+    margin: 0 auto;
+    background-color: lightcoral;
+    margin-bottom: 20px;
+}

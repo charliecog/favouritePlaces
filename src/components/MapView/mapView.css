@@ -1,0 +1,10 @@
+.mapArea {
+    width: 600px;
+    height: 600px;
+    background-color: rebeccapurple;
+}
+
+.leafletMap {
+    width: 600px;
+    height: 600px;
+}
