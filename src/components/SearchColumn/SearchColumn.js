@@ -7,8 +7,11 @@ export default class SearchColumn extends Component {
     render(){
         return(
             <div className="searchColumn">
-                <input type="text" name="search" placeholder="Search places you love..."/>
-                <PlaceCards/>
+                <input type="text" name="search" placeholder="Find your favourite places..."/>
+                <PlaceCards
+                    locations={this.props.locations}
+                    changePosition={this.props.changePosition}
+                />
             </div>
         )
     }

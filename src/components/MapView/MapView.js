@@ -7,7 +7,10 @@ export default class MapView extends Component {
     render(){
         return(
             <div className="mapArea">
-                <LeafletMap id="mapid"/>
+                <LeafletMap id="mapid"
+                            position={this.props.position}
+                            locations={this.props.locations}
+                />
             </div>
         )
     }

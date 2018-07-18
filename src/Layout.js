@@ -4,11 +4,78 @@ import MapView from "./components/MapView/MapView";
 import SearchColumn from "./components/SearchColumn/SearchColumn";
 
 class Layout extends Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            mapPosition: {
+                            lat: 51.3758,
+                            lng: -2.36172,
+                            zoom: 13,
+                        },
+            details: {
+                one: {
+                    name: 'Widcombe',
+                    description: 'A haunted house',
+                    submittedBy: 'Charlie',
+                    position: [51.37501169999999, -2.349978100000044],
+                },
+                two: {
+                    name: 'Bath Spa',
+                    description: 'Great for a soak',
+                    submittedBy: 'Mike',
+                    position: [51.37768, -2.357020000000034],
+                },
+                three: {
+                    name: 'UBIC',
+                    description: 'Nice for a meeting',
+                    submittedBy: 'Michele',
+                    position: [51.3778935, -2.3607699000000366],
+
+                },
+                four: {
+                    name: 'Odd Down',
+                    description: 'Funny name!',
+                    submittedBy: 'Hannah',
+                    position: [51.358486, -2.380110000000059],
+                },
+                five: {
+                    name: 'Temple Meads',
+                    description: 'Get a train!',
+                    submittedBy: 'Eve',
+                    position: [51.4497534, -2.58101929999998],
+                },
+            },
+        }
+
+        this.newMapPosition = this.newMapPosition.bind(this);
+    }
+
+    newMapPosition(newLat, newLong) {
+        this.setState({
+            mapPosition: {
+                lat: newLat,
+                lng: newLong,
+                zoom: 13,
+            },
+        })
+    }
+
+
+
   render() {
     return (
       <div className="App">
-          <SearchColumn/>
-          <MapView/>
+
+          <SearchColumn
+              locations={this.state.details}
+              changePosition={this.newMapPosition}
+          />
+
+          <MapView
+              position={this.state.mapPosition}
+              locations={this.state.details}
+          />
+
       </div>
     );
   }

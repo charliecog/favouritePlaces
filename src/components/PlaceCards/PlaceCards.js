@@ -5,43 +5,16 @@ import PlaceCardDetails from "./PlaceCardDetails";
 
 export default class PlaceCards extends Component {
     render(){
-        const one = {
-            name: 'Widcombe',
-            description: 'A haunted house',
-            submittedBy: 'Charlie',
-        }
 
-        const two = {
-            name: 'Bath Spa',
-            description: 'Great for a soak',
-            submittedBy: 'Mike',
-        }
-
-        const three = {
-            name: 'UBIC',
-            description: 'Nice for a meeting',
-            submittedBy: 'Michele',
-        }
-
-        const four = {
-            name: 'Odd Down',
-            description: 'Funny name!',
-            submittedBy: 'Hannah',
-        }
-
-        const five = {
-            name: 'Bath Station',
-            description: 'Get to Bristol',
-            submittedBy: 'Eve',
-        }
+        const details = this.props.locations
 
         return(
             <div className="placeCards">
-                <PlaceCardDetails details={one}/>
-                <PlaceCardDetails details={two}/>
-                <PlaceCardDetails details={three}/>
-                <PlaceCardDetails details={four}/>
-                <PlaceCardDetails details={five}/>
+                <PlaceCardDetails changePosition={this.props.changePosition} details={details.one}/>
+                <PlaceCardDetails changePosition={this.props.changePosition} details={details.two}/>
+                <PlaceCardDetails changePosition={this.props.changePosition} details={details.three}/>
+                <PlaceCardDetails changePosition={this.props.changePosition} details={details.four}/>
+                <PlaceCardDetails changePosition={this.props.changePosition} details={details.five}/>
             </div>
         )
     }
