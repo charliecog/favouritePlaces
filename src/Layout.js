@@ -12,39 +12,44 @@ class Layout extends Component {
                             lng: -2.36172,
                             zoom: 13,
                         },
-            details: {
-                one: {
+            details: [
+                {
+                    key: 1,
                     name: 'Widcombe',
                     description: 'A haunted house',
                     submittedBy: 'Charlie',
                     position: [51.37501169999999, -2.349978100000044],
                 },
-                two: {
+                {
+                    key: 2,
                     name: 'Bath Spa',
                     description: 'Great for a soak',
                     submittedBy: 'Mike',
                     position: [51.37768, -2.357020000000034],
                 },
-                three: {
+                {
+                    key: 3,
                     name: 'UBIC',
                     description: 'Nice for a meeting',
                     submittedBy: 'Michele',
                     position: [51.3778935, -2.3607699000000366],
 
                 },
-                four: {
+                {
+                    key: 4,
                     name: 'Odd Down',
                     description: 'Funny name!',
                     submittedBy: 'Hannah',
                     position: [51.358486, -2.380110000000059],
                 },
-                five: {
+                {
+                    key: 5,
                     name: 'Temple Meads',
                     description: 'Get a train!',
                     submittedBy: 'Eve',
                     position: [51.4497534, -2.58101929999998],
                 },
-            },
+            ],
         }
 
         this.newMapPosition = this.newMapPosition.bind(this);

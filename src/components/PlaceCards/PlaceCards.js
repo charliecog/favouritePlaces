@@ -10,11 +10,11 @@ export default class PlaceCards extends Component {
 
         return(
             <div className="placeCards">
-                <PlaceCardDetails changePosition={this.props.changePosition} details={details.one}/>
-                <PlaceCardDetails changePosition={this.props.changePosition} details={details.two}/>
-                <PlaceCardDetails changePosition={this.props.changePosition} details={details.three}/>
-                <PlaceCardDetails changePosition={this.props.changePosition} details={details.four}/>
-                <PlaceCardDetails changePosition={this.props.changePosition} details={details.five}/>
+                <PlaceCardDetails changePosition={this.props.changePosition} details={details[0]}/>
+                <PlaceCardDetails changePosition={this.props.changePosition} details={details[1]}/>
+                <PlaceCardDetails changePosition={this.props.changePosition} details={details[2]}/>
+                <PlaceCardDetails changePosition={this.props.changePosition} details={details[3]}/>
+                <PlaceCardDetails changePosition={this.props.changePosition} details={details[4]}/>
             </div>
         )
     }
